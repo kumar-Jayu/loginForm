@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./neracss.css" />
+    <title>Login and Carousel</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <form id="loginForm">
+          <u><h2>Login here</h2></u>
+          <label for="username">Username/Email</label>
+          <input
+            id="username"
+            type="email"
+            required="true"
+            placeholder="abc@gmail.com"
+          />
+          <br />
+          <label for="password">Password</label>
+          <input id="password" type="password" required />
+          <br />
+          <button class="btn" type="submit">Login</button>
+          <h2>Not a user? Click register</h2>
+          <button class="btn" type="button" onclick="showRegisterForm()">
+            Register
+          </button>
+        </form>
+        <form id="registerForm" style="display: none">
+          <u><h2>Register</h2></u>
+          <!-- Register form fields -->
+
+          <label for="R-name">Your Name</label>
+          <input id="R-name" type="text" required />
+          <br />
+          <label for="R-email">Your E-mail</label>
+          <input
+            id="R-email"
+            type="email"
+            required
+            placeholder="abc@gmail.com"
+          />
+          <br />
+          <label for="R-password">Password</label>
+          <input
+            id="R-password"
+            type="password"
+            required
+            placeholder="set password"
+          />
+          <button class="btn" type="submit">Register</button>
+          <h2>Already a user? Click login</h2>
+          <button class="btn" type="button" onclick="showLoginForm()">
+            Back to Login
+          </button>
+        </form>
+      </div>
+      <div class="right">
+        <div class="carousel">
+          <img src="./canon.jpg" alt="Image 1" />
+          <img src="./oneplus bud.jpg" alt="Image 2" />
+          <img src="./canon.jpg" alt="Image 3" />
+          <img src="./oneplus bud.jpg" alt="Image 4" />
+          <img src="./canon.jpg" alt="Image 5" />
+          <img src="./oneplus bud.jpg" alt="Image 6" />
+          <!-- Add more images as needed -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showRegisterForm() {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("registerForm").style.display = "block";
+      }
+
+      function showLoginForm() {
+        document.getElementById("loginForm").style.display = "block";
+        document.getElementById("registerForm").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
